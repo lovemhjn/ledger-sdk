@@ -56,6 +56,7 @@ fun CreditNoteDetailScreen(
     CommonContainer(
         title = stringResource(id = R.string.credit_note_details),
         onBackPress = onBackPress,
+        ledgerColors = ledgerColors
     ) {
         when {
             uiState.isLoading -> {

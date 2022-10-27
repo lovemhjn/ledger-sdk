@@ -58,7 +58,8 @@ fun TotalOutstandingScreen(
         title = stringResource(id = R.string.total_outstanding_details),
         onBackPress = onBackPress,
         scaffoldState = scaffoldState,
-        backgroundColor = Background
+        backgroundColor = Background,
+        ledgerColors = ledgerColors
     ) {
         uiState?.let { OutstandingScreen(viewState = uiState) }
     }

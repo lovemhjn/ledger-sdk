@@ -9,7 +9,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -18,12 +17,15 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import lib.dehaat.ledger.R
+import lib.dehaat.ledger.initializer.LedgerSDK
+import lib.dehaat.ledger.initializer.themes.LedgerColors
 import lib.dehaat.ledger.resources.TextBlack
 import lib.dehaat.ledger.resources.subTitleTextStyle
 
 @Composable
 fun CustomAppBar(
     title: String,
+    ledgerColors: LedgerColors,
     subtitle: String = "",
     iconRight: Painter? = null,
     onBackPress: () -> Unit,
@@ -33,7 +35,7 @@ fun CustomAppBar(
     Surface(
         modifier = Modifier.fillMaxWidth(),
         elevation = appBarElevation,
-        color = Color.White
+        color = ledgerColors.ActionBarColor
     ) {
         Row(
             modifier = Modifier
@@ -42,23 +44,22 @@ fun CustomAppBar(
             verticalAlignment = Alignment.CenterVertically
         ) {
 
-            IconButton(onClick = { onBackPress() }) {
-                Icon(
-                    painter = painterResource(id = R.drawable.ic_back_black),
-                    contentDescription = "back button"
-                )
-            }
+	        IconButton(onClick = onBackPress, modifier = Modifier.padding(start = 8.dp)) {
+		        Icon(
+                    painter = painterResource(id = if (LedgerSDK.isDBA) R.drawable.ic_back_dba else R.drawable.ic_back_black),
+			        contentDescription = "back button"
+		        )
+	        }
 
             Column(
                 modifier = Modifier
-                    .padding(start = 10.dp)
                     .weight(1f)
             ) {
                 Text(
                     text = title,
                     color = TextBlack,
-                    fontWeight = FontWeight.Medium,
-                    fontSize = 20.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 18.sp,
                     lineHeight = 21.sp,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis

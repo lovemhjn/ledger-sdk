@@ -47,6 +47,7 @@ fun PaymentDetailScreen(
     CommonContainer(
         title = "Payment Detail",
         onBackPress = onBackPress,
+        ledgerColors = ledgerColors
     ) {
         when {
             uiState.isLoading -> {
