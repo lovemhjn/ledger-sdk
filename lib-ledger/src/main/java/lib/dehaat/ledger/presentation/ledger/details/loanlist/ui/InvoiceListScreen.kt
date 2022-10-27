@@ -131,7 +131,8 @@ fun InvoiceListScreen(
         title = stringResource(id = R.string.invoice_list),
         onBackPress = onBackPress,
         scaffoldState = rememberScaffoldState(),
-        backgroundColor = Background
+        backgroundColor = Background,
+        ledgerColors = ledgerColors
     ) {
         when (uiState.state) {
             UIState.SUCCESS -> {
