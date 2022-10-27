@@ -77,6 +77,7 @@ fun RevampInvoiceDetailScreen(
         title = stringResource(id = R.string.invoice_details),
         onBackPress = onBackPress,
         backgroundColor = Background,
+        ledgerColors = ledgerColors,
         bottomBar = {
             AnimatedVisibility(visible = false) {}
         }

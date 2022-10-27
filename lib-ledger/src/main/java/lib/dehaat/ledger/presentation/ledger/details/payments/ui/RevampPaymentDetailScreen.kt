@@ -59,7 +59,8 @@ fun RevampPaymentDetailScreen(
     CommonContainer(
         title = stringResource(id = R.string.payment_detail),
         onBackPress = onBackPress,
-        backgroundColor = Background
+        backgroundColor = Background,
+        ledgerColors = ledgerColors
     ) {
         when (uiState.state) {
             UIState.SUCCESS -> {

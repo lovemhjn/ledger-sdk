@@ -63,6 +63,7 @@ fun InvoiceDetailScreen(
     CommonContainer(
         title = "Invoice Detail",
         onBackPress = onBackPress,
+        ledgerColors = ledgerColors
     ) {
         when {
             uiState.isLoading -> {

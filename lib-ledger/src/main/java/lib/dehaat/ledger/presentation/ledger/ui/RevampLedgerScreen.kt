@@ -91,6 +91,7 @@ fun RevampLedgerScreen(
         onBackPress = onBackPress,
         scaffoldState = scaffoldState,
         backgroundColor = Background,
+        ledgerColors = ledgerColors,
         bottomBar = {
             if (uiState.summaryViewData?.externalFinancierSupported == false) {
                 AnimatedVisibility(

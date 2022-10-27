@@ -30,5 +30,6 @@ open class LedgerColors(
     val TransactionAndCreditScreenBGColor: Color,
     val FilterDialogDateBGColor: Color,
     val FilterIconsColor: Color,
-    val LedgerPrimaryColor: Color
+    val LedgerPrimaryColor: Color,
+    val ActionBarColor: Color
 )

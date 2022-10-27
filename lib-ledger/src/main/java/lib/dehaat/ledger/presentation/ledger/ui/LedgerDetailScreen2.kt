@@ -107,6 +107,7 @@ fun LedgerDetailScreen2(
         title = viewModel.dcName,
         onBackPress = onBackPress,
         scaffoldState = scaffoldState,
+        ledgerColors = ledgerColors,
         bottomBar = {
             if (uiState.creditSummaryViewData?.credit?.externalFinancierSupported == false) {
                 AnimatedVisibility(
