@@ -4,10 +4,13 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.compose.ui.graphics.toArgb
+import androidx.core.view.WindowInsetsControllerCompat
 import com.amazonaws.mobile.client.AWSMobileClient
 import com.dehaat.androidbase.helper.showToast
 import dagger.hilt.android.AndroidEntryPoint
@@ -15,6 +18,7 @@ import java.util.*
 import javax.inject.Inject
 import lib.dehaat.ledger.R
 import lib.dehaat.ledger.initializer.LedgerSDK
+import lib.dehaat.ledger.initializer.themes.LedgerColors
 import lib.dehaat.ledger.navigation.LedgerNavigation
 import lib.dehaat.ledger.presentation.LedgerConstants
 import lib.dehaat.ledger.presentation.LedgerDetailViewModel
@@ -58,6 +62,8 @@ class LedgerDetailActivity : ComponentActivity() {
             finish()
             return
         }
+
+        modifyStatusBar(LedgerSDK.currentApp.ledgerColors)
 
         AWSMobileClient.getInstance().initialize(this).execute()
 
@@ -116,6 +122,15 @@ class LedgerDetailActivity : ComponentActivity() {
         conf.locale = locale
         res.updateConfiguration(conf, dm)
         Locale.setDefault(locale)
+    }
+
+    private fun modifyStatusBar(ledgerColors: LedgerColors) {
+        if(LedgerSDK.isDBA) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            window.statusBarColor = ledgerColors.ActionBarColor.toArgb()
+            WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars =
+                true
+        }
     }
 
     companion object {

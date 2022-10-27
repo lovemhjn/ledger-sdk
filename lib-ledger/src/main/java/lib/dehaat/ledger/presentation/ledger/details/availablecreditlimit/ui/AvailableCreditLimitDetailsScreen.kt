@@ -88,6 +88,7 @@ fun AvailableCreditLimitDetailsScreen(
         title = stringResource(id = R.string.available_credit_limit),
         onBackPress = onBackPress,
         scaffoldState = scaffoldState,
+        ledgerColors = ledgerColors,
         backgroundColor = Background
     ) {
         uiState?.let {

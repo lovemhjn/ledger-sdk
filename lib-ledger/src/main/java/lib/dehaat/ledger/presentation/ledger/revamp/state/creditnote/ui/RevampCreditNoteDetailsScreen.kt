@@ -49,7 +49,8 @@ fun RevampCreditNoteDetailsScreen(
         title = stringResource(id = R.string.credit_note_details),
         onBackPress = onBackPress,
         scaffoldState = rememberScaffoldState(),
-        backgroundColor = Background
+        backgroundColor = Background,
+        ledgerColors = ledgerColors
     ) {
         when (uiState.state) {
             UIState.SUCCESS -> {
