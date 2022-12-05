@@ -31,7 +31,6 @@ object LedgerSDK {
         this.bucket = bucket
         this.appIcon = appIcon
         this.isDebug = debugMode
-        Fresco.initialize(context)
     }
 
     fun isCurrentAppAvailable() = ::currentApp.isInitialized && ::bucket.isInitialized
