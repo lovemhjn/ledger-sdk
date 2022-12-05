@@ -1,5 +1,6 @@
 package lib.dehaat.ledger.presentation.ledger.ui.component
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -13,12 +14,13 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.skydoves.landscapist.fresco.FrescoImage
+import com.skydoves.landscapist.glide.GlideImage
 import lib.dehaat.ledger.R
 import lib.dehaat.ledger.presentation.common.uicomponent.HorizontalSpacer
 import lib.dehaat.ledger.presentation.common.uicomponent.VerticalSpacer
@@ -124,10 +126,15 @@ private fun RevampProductView(
     modifier = Modifier
         .fillMaxWidth()
 ) {
-    FrescoImage(
-        imageUrl = product.fname,
-        placeHolder = painterResource(R.drawable.default_product),
-        contentDescription = stringResource(id = R.string.accessibility_icon),
+    GlideImage(
+        imageModel = { product.fname },
+        failure = {
+            Image(
+                modifier = Modifier.align(Alignment.Center),
+                painter = painterResource(R.drawable.default_product),
+                contentDescription = "",
+            )
+        },
         modifier = Modifier
             .height(62.dp)
             .width(55.dp)

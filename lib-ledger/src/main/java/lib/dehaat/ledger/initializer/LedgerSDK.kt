@@ -3,7 +3,6 @@ package lib.dehaat.ledger.initializer
 import android.content.Context
 import android.os.Environment
 import androidx.annotation.DrawableRes
-import com.facebook.drawee.backends.pipeline.Fresco
 import lib.dehaat.ledger.presentation.ledger.LedgerDetailActivity
 import java.io.File
 
@@ -25,7 +24,6 @@ object LedgerSDK {
         this.bucket = bucket
         this.appIcon = appIcon
         this.isDebug = debugMode
-        Fresco.initialize(context)
     }
 
     fun isCurrentAppAvailable() = ::currentApp.isInitialized && ::bucket.isInitialized
