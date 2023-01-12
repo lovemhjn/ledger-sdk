@@ -623,9 +623,9 @@ fun textSemiBold14Sp(
 )
 
 @Composable
-fun textSemiBold16Sp(
+fun textMediumNoto16Sp(
     textColor: Color = TextBlack,
-    fontWeight: FontWeight = FontWeight.SemiBold,
+    fontWeight: FontWeight = FontWeight.Medium,
     lineHeight: TextUnit = 24.sp
 ) = TextStyle(
     fontSize = 16.sp,
@@ -633,4 +633,30 @@ fun textSemiBold16Sp(
     fontWeight = fontWeight,
     color = textColor,
     fontFamily = notoSansDisplayMedium
+)
+
+@Composable
+fun textMediumNoto14Sp(
+    textColor: Color = TextBlack,
+    fontWeight: FontWeight = FontWeight.Medium,
+    lineHeight: TextUnit = 16.sp
+) = TextStyle(
+    fontSize = 14.sp,
+    lineHeight = lineHeight,
+    fontWeight = fontWeight,
+    color = textColor,
+    fontFamily = notoSansDisplayMedium
+)
+
+@Composable
+fun textNoto12Sp(
+    textColor: Color = TextBlack,
+    fontWeight: FontWeight = FontWeight.Normal,
+    lineHeight: TextUnit = 12.sp
+) = TextStyle(
+    fontSize = 12.sp,
+    lineHeight = lineHeight,
+    fontWeight = fontWeight,
+    color = textColor,
+    fontFamily = notoSansRegular
 )

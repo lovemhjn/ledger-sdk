@@ -435,7 +435,7 @@ class LedgerViewDataMapper @Inject constructor() {
     private fun toABSTransactionViewData(entity: ABSTransactionEntity) = with(entity) {
         ABSTransactionViewData(
             amount,
-            DateUtils.getDateInFormat(dd_MMM_yyy, orderingDate.toFloat()),
+            orderingDate?.let { DateUtils.getDateInFormat(dd_MMM_yyy, orderingDate.toFloat()) },
             schemeName
         )
     }

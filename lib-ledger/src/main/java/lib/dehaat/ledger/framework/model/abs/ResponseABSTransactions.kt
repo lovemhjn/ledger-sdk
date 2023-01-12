@@ -15,7 +15,7 @@ data class ABSTransaction(
     @Json(name = "amount")
     val amount: Double,
     @Json(name = "ordering_date")
-    val orderingDate: Double,
+    val orderingDate: Double?,
     @Json(name = "scheme_name")
-    val schemeName: String
+    val schemeName: String?
 )
