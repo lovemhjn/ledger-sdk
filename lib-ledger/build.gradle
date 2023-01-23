@@ -121,7 +121,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.dehaat'
                 artifactId = 'Ledger-Library'
-                version = '1.1.9'
+                version = '1.2.1'
             }
         }
     }
