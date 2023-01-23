@@ -56,6 +56,11 @@ fun AbsBanner(
 			text = stringResource(R.string.adjust_remaining_balance, abs?.lastMoveScheme.orEmpty()),
 			style = textNoto12Sp(TextLightGrey)
 		)
+	} else {
+		Text(
+			text = stringResource(R.string.amount_is_blocked),
+			style = textNoto12Sp(TextLightGrey)
+		)
 	}
 	Row(Modifier.padding(top = 18.dp)) {
 		val amount = remember(abs?.amount) { abs?.amount?.orZero().toString().getAmountInRupees() }

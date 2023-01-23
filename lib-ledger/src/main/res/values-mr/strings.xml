@@ -17,4 +17,5 @@
     <string name="payment_will_be_processed_within_1_2_days">Payment will be processed within 1–2 days</string>
     <string name="under_process">Under Process</string>
     <string name="your_order_limit_is_exhausted_please_pay_minimum">Your order limit is exhausted. Please pay minimum Rs %s immediately</string>
+    <string name="amount_is_blocked">योजनेसाठी ऑर्डर उघडेपर्यंत आगाऊ रक्कम अवरोधित केली जाते</string>
 </resources>

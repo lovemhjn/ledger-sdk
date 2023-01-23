@@ -23,4 +23,5 @@
     <string name="advanced_balance_details">অগ্রীম ব্যালেন্সের বিবরণ</string>
     <string name="advance_balance">অগ্রীম ব্যালেন্স</string>
     <string name="advance_bal_note">অগ্রীম ব্যালেন্সের অর্ডার খোলা পর্যন্ত ব্লক করা থাকবে।\nঅর্ডারিং খোলার পরে আপনার অগ্রীম বকেয়া টাকার পরিমাণের সাথে অ্যাডজাস্ট করা হয়ে যাবে</string>
+    <string name="amount_is_blocked">স্কিমের জন্য অর্ডার না খোলা পর্যন্ত অগ্রিম পরিমাণ ব্লক করা হয়েছে</string>
 </resources>

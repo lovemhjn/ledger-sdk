@@ -136,11 +136,12 @@
     <string name="some_features_locked">Some app features are locked</string>
     <string name="unpaid_outstanding">As you have an unpaid outstanding of  ₹ %s</string>
     <string name="more_than_90_days">for more than 90 days.</string>
-    <string name="advance_balance_booking">Advance balance: Booking scheme</string>
+    <string name="advance_balance_booking">Advance Payment : Advance Booking Scheme</string>
     <string name="adjust_remaining_balance">%s’s balance has been adjusted with outstanding</string>
     <string name="see_details">See details</string>
     <string name="advanced_payment_blocked_till_s">Advanced payment is blocked till %s</string>
     <string name="advanced_balance_details">Advanced balance details</string>
     <string name="advance_balance">Advance balance</string>
     <string name="advance_bal_note">Advance balance will be kept blocked until ordering opens.\nIt will be adjusted with outstanding once ordering window will open.</string>
+    <string name="amount_is_blocked">Advance amount is blocked until ordering for scheme opens</string>
 </resources>

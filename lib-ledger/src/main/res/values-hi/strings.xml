@@ -127,11 +127,12 @@
     <string name="some_features_locked">कुछ ऐप सुविधाएं लॉक हैं</string>
     <string name="unpaid_outstanding">चूंकि आपने ₹ %s</string>
     <string name="more_than_90_days">का बकाया 90 से अधिक दिनों से भुगतान नहीं किया है</string>
-    <string name="advance_balance_booking">एडवांस बैलेन्स: बुकिंग स्कीम</string>
+    <string name="advance_balance_booking">एडवांस भुगतान : एडवांस बुकिंग स्कीम</string>
     <string name="adjust_remaining_balance">%s स्कीम का बैलेन्स बकाया में ऐडजस्ट हो गया है।</string>
     <string name="see_details">विवरण देखें</string>
     <string name="advanced_payment_blocked_till_s">%s तक एडवाँस राशी ब्लॉक्ड है।</string>
     <string name="advanced_balance_details">एडवांस बैलेन्स विवरण</string>
     <string name="advance_balance">एडवांस बैलेन्स</string>
     <string name="advance_bal_note">एडवाँस बैलेन्स ऑर्डरिंग खुलने तक ब्लॉक रहेगा।\nऑर्डरिंग खुलने पर आपका एडवाँस बकाया राशी में एडजस्ट होजाएगा</string>
+    <string name="amount_is_blocked">एडवाँस बैलेन्स ऑर्डर खुलने तक ब्लॉक है</string>
 </resources>

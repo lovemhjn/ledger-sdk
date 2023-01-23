@@ -24,4 +24,5 @@
     <string name="advanced_balance_details">એડવાન્સ બેલેન્સ વર્ણન</string>
     <string name="advance_balance">એડવાન્સ બેલેન્સ</string>
     <string name="advance_bal_note">એડવાન્સ બેલેન્સ ઓર્ડરિંગ ખુલવા સુધી બ્લોક રહેશે.\nઓર્ડરિંગ ખુલવા પર તમારું એડવાન્સ બાકી લેણાં સામે એડજસ્ટ થઇ જશે</string>
+    <string name="amount_is_blocked">જ્યાં સુધી સ્કીમનો ઓર્ડર ન ખૂલે ત્યાં સુધી એડવાન્સ રકમ બ્લોક કરવામાં આવે છે</string>
 </resources>
